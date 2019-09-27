@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cl.ccu.skintears" android:installLocation="preferExternal">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Para informar que necesitamos que el dispositivo tenga una cámara -->
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+
+    <application
+        android:name="cl.ccu.skintears.activities.evaluaciones.Utilidad"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_skin_tears_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_skin_tears_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" /> <!-- Add license key in meta-data tag here -->
+        <meta-data
+            android:name="pdftron_license_key"
+            android:value="${pdftronLicenseKey}" />
+
+        <activity android:name="cl.ccu.skintears.activities.reconocimiento.SubirImagenActivity" />
+        <activity android:name="cl.ccu.skintears.activities.reconocimiento.CameraActivity" />
+        <activity
+            android:name="com.pdftron.pdf.controls.DocumentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
+            android:theme="@style/CustomAppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="cl.ccu.skintears.androidpdfviewer.AndroidPDFViewer" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name="cl.ccu.skintears.activities.InicioActivity"
+            android:label="@string/title_activity_inicio"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cl.ccu.skintears.activities.ContenidosActivity"
+            android:label="@string/title_activity_contenidos"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="cl.ccu.skintears.activities.TratamientosActivity"
+            android:label="@string/title_activity_tratamientos"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="cl.ccu.skintears.activities.EvaluacionesActivity"
+            android:label="@string/title_activity_evaluaciones"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="cl.ccu.skintears.activities.CompartirImagenActivity"
+            android:label="@string/title_activity_compartir"
+            android:parentActivityName="cl.ccu.skintears.activities.InicioActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="cl.ccu.skintears.activities.ReconocimientoActivity"
+            android:label="@string/title_activity_reconocimiento"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="cl.ccu.skintears.activities.evaluaciones.MenuEvaluacion"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="cl.ccu.skintears.activities.evaluaciones.PreguntasEvaluacion"
+            android:label="@string/app_name"
+            android:parentActivityName="cl.ccu.skintears.activities.evaluaciones.MenuEvaluacion"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cl.ccu.skintears.activities.evaluaciones.MenuEvaluacion" />
+        </activity>
+        <activity
+            android:name="cl.ccu.skintears.activities.evaluaciones.Resultados"
+            android:label="@string/app_name"
+            android:parentActivityName="cl.ccu.skintears.activities.evaluaciones.MenuEvaluacion"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cl.ccu.skintears.activities.evaluaciones.MenuEvaluacion" />
+        </activity>
+        <activity
+            android:name="cl.ccu.skintears.activities.evaluaciones.Despedida"
+            android:label="@string/app_name"
+            android:parentActivityName="cl.ccu.skintears.activities.evaluaciones.MenuEvaluacion"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cl.ccu.skintears.activities.evaluaciones.MenuEvaluacion" />
+        </activity>
+
+
+
+        <activity android:name="cl.ccu.skintears.tflitecamera.CameraActivity"
+            android:label="@string/app_name">
+        </activity>
+
+
+
+    </application>
+
+</manifest>

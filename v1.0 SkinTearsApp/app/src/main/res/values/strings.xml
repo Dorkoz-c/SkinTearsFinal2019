@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">Skin Tears</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="bienvenida">\Módulo de Evaluaciones, \n\nCompruebe cuanto sabe de Skin Tears...</string>
+    <string name="resultado">\¿Intentelo nuevamente? \n\nEn su última evaluación su puntuación fue: </string>
+    <string name="pregunta">PREGUNTA</string>
+
+
+    <string name="title_activity_inicio">Inicio</string>
+    <string name="title_activity_contenidos">Contenidos</string>
+    <string name="title_activity_tratamientos">Tratamientos</string>
+    <string name="title_activity_evaluaciones">Evaluaciones</string>
+    <string name="title_activity_reconocimiento">Reconocimiento</string>
+    <string name="title_activity_compartir">Compartir imagen</string>
+
+
+
+    <string name="open_pdf_android">Open PDF with PdfRenderer</string>
+    <string name="open_pdf_pdftron">Abrir documento</string>
+    <string name="reconocimiento">Iniciar Reconocimiento</string>
+
+
+    <string name="welcomeText">
+        <br>En esta aplicación podrá:\n\n</br>
+        <br>- Aprender sobre las heridas Skin Tears.\n</br>
+        <br>- Conocer los tratamientos recomendados.\n</br>
+        <br>- Evaluar lo aprendido.\n</br>
+        <br>- Reconocer heridas.</br>
+    </string>
+
+    <string name="reconocimientoInstrucciones">
+        <br>Reconocimiento de Heridas Skin Tears\n\n</br>
+        <br>Instrucciones para una buena clasificación\n\n</br>
+        <br>- Capture la imagen desde cerca.\n</br>
+        <br>- Enfoque bien la herida.\n</br>
+        <br>- Es importante una buena iluminacion.\n</br>
+    </string>
+
+
+    <string name="compartirImagen">
+        <br><b><big>ADVERTENCIA !!!\n\n</big></b></br>
+        <br>Sólo suba imágenes de heridas\n\n</br>
+        <br>La imagen que comparta va a subir a Internet\n\n</br>
+        <br>La imagen va a ser de conocimiento público\n\n\n</br>
+        <br>CUIDADO CON LAS IMÁGENES QUE COMPARTA\n\n</br>
+    </string>
+
+
+    <string name="sls">¡ Bienvenido !</string>
+
+
+    <string name="copyright">Copyright © Claudio Cabrera</string>
+
+    <string name="Version">Version 1.0 © Skin Tears App</string>
+    <string name="menu_inicial">Menú Inicial</string>
+    <string name="jugar">Iniciar Evaluación</string>
+    <string name="resultados">Último Resultado</string>
+    <string name="volver">Volver</string>
+
+
+    <string name="picture">Picture</string>
+    <string name="description_info">Info</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="toggle_turn_on">NN:On</string>
+    <string name="toggle_turn_off">NN:Off</string>
+    <string name="toggle">Use NNAPI</string>
+
+
+
+
+</resources>

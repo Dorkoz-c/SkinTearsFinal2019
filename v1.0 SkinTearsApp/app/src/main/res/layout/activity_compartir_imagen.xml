@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:layout_centerInParent="true"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_foto_rec"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/estilo_borde_redondo"
+        android:onClick="sacarFoto"
+        android:text="Activar Cámara!"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/img_foto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_foto_rec" />
+
+    <TextView
+        android:id="@+id/Text_aviso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:layout_marginBottom="30dp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:lines="16"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:singleLine="false"
+        android:text="@string/compartirImagen"
+        android:textSize="16dp" />
+
+
+    <Button
+        android:id="@+id/btn_subir_foto_rec"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/estilo_borde_redondo"
+        android:text="Seleccionar Imagen!"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>
