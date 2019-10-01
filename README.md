@@ -1,5 +1,7 @@
 # Skin Tears App
+
 Proyecto de Titulo para la Carrera de Ingeniería en Computación e Informatica Universidad Andrés Bello.
+
 
 ## Requerimientos mínimos de la Aplicación para su instalación.
 
@@ -19,6 +21,17 @@ La aplicación fue instalada en los siguientes dispositivos:
 >* Samsung Galaxy S 7
 >* Samsung Galaxy J 7 Neo
 >* Samsung Galaxy J 3 v2016
+
+
+## Software de desarrollo de la Aplicación.
+
+Los requerimientos mínimos de Software que aseguran una exitosa instalación del proyecto en el equipo para su correcto desarrollo.
+
+>* Android Studio versión 3.5
+>* Python versión 2.7
+>* GitHub Desktop versión 2.1.2
+>* Sistema Operativo no afecta la instalación debido a que el Software puede ser instalado en Linux, Windows o Mac.
+
 
 ## Funcionamiento de la Aplicación.
 
@@ -50,7 +63,6 @@ Cuando el usuario llega al menú principal de cada módulo, si desea salir deb
 En las imágenes siguientes se puede apreciar el flujo de la aplicación, el cual es de arriba hacia abajo, siguiendo el orden de las distintas opciones.
 
 
-
 ![Flujo1](https://github.com/claudiocu81/SkinTearsFinal2019/blob/master/imagenes/FlujoApp1.JPG)
 ![Flujo2](https://github.com/claudiocu81/SkinTearsFinal2019/blob/master/imagenes/FlujoApp2.JPG)
 
@@ -76,9 +88,7 @@ Descargar el proyecto desde el siguiente Link:
 >* Puede que le solicite instalar dependencias adicionales, verifique el archivo Gradle(App) y sincronize luego de realizar cambios.
 
 
+## Autores del Proyecto.
 
-
-
-
-
-
+>* Autor: **Claudio Cabrera**
+>* Profesor Guía: **Diego Mellado**
