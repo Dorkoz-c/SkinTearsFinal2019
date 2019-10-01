@@ -2,6 +2,8 @@
 
 Proyecto de Titulo para la Carrera de Ingeniería en Computación e Informatica Universidad Andrés Bello.
 
+**Sistema educativo con capacidad de reconocimiento de heridas, como método de apoyo a su clasificación (S.E.R.H.).**
+
 
 ## Requerimientos mínimos de la Aplicación para su instalación.
 
