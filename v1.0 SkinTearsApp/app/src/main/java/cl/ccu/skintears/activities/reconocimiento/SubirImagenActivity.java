@@ -1,8 +1,11 @@
 package cl.ccu.skintears.activities.reconocimiento;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -62,9 +65,30 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
         btnSubir.setOnClickListener(this);
     }
 
+
+    public static boolean compruebaConexion(Context context) {
+
+        boolean connected = false;
+
+        ConnectivityManager connec = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        // Recupera todas las redes (tanto móviles como wifi)
+        NetworkInfo[] redes = connec.getAllNetworkInfo();
+
+        for (int i = 0; i < redes.length; i++) {
+            // Si alguna red tiene conexión, se devuelve true
+            if (redes[i].getState() == NetworkInfo.State.CONNECTED) {
+                connected = true;
+            }
+        }
+        return connected;
+    }
+
+
+
     public String getStringImagen(Bitmap bmp) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        bmp.compress(Bitmap.CompressFormat.JPEG, 25, baos);
+        bmp.compress(Bitmap.CompressFormat.JPEG, 20, baos);
         byte[] imageBytes = baos.toByteArray();
         String encodedImage = Base64.encodeToString(imageBytes, Base64.DEFAULT);
         return encodedImage;
@@ -72,7 +96,7 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
 
     private void uploadImage() {
         //Mostrar el diálogo de progreso
-        final ProgressDialog loading = ProgressDialog.show(this, "Subiendo...", "Espere por favor...", false, false);
+        final ProgressDialog loading = ProgressDialog.show(this, "Subiendo Imagen", "Espere por favor . . .", false, false);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, UPLOAD_URL,
                 new Response.Listener<String>() {
                     @Override
@@ -90,7 +114,9 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
                         loading.dismiss();
 
                         //Showing toast
-                        Toast.makeText(SubirImagenActivity.this, volleyError.getMessage().toString(), Toast.LENGTH_LONG).show();
+                        //Toast.makeText(SubirImagenActivity.this, volleyError.getMessage().toString(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(getBaseContext(),"ERROR DE CONEXION", Toast.LENGTH_LONG).show();
+
                     }
                 }) {
             @Override
@@ -152,7 +178,30 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
         }
 
         if (v == btnSubir) {
-            uploadImage();
+
+
+
+            if (!compruebaConexion(this)) {
+                Toast.makeText(getBaseContext(),"CONECTESE A INTERNET", Toast.LENGTH_LONG).show();
+            }
+
+
+            //INDICO QUE DEBE SELECCIONAR UNA IMAGEN PARA SUBIR
+            if (bitmap == null){
+                //Image doesn´t exist.
+                Toast avisoSubaImagen = Toast.makeText(SubirImagenActivity.this, "SELECCIONE UNA IMAGEN", Toast.LENGTH_LONG);
+                avisoSubaImagen.show();
+            }else{
+                uploadImage();
+            }
+            //uploadImage();
+
+
+
+
+
+
+
         }
     }
 }

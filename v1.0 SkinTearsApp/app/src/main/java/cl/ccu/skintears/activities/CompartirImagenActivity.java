@@ -103,27 +103,6 @@ public class CompartirImagenActivity<networkInfo> extends AbstractDrawerActivity
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     @Override
     public int getLayoutId() {
         return R.layout.activity_compartir_imagen;
