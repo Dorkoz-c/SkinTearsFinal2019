@@ -1,15 +1,34 @@
 # Skin Tears App
-Proyecto de Titulo para la Carrera de Ingeniería en Computación e Informatica Universidad Andrés Bello
+Proyecto de Titulo para la Carrera de Ingeniería en Computación e Informatica Universidad Andrés Bello.
+
+## Requerimientos mínimos de la Aplicación para su instalación.
+
+Para que la aplicación funcione adecuadamente, el SmartPhone debe tener como mínimo las siguientes caracteristicas:
+
+>* Sistema Operativo: Android 5.0 o Lollipop
+>* Espacio libre: 95 MB
+>* Procesador: 1,2 Quadcore
+>* Memoria: 1 GB
+>* Camara fotográfica
+>* Acceso a Internet
+
+La aplicación fue instalada en los siguientes dispositivos:
+>* Motorola moto G 6 Play
+>* Samsung Galaxy Note 9
+>* LG K10 v2017
+>* Samsung Galaxy S 7
+>* Samsung Galaxy J 7 Neo
+>* Samsung Galaxy J 3 v2016
 
 ## Funcionamiento de la Aplicación.
 
 Se debe iniciar la aplicación desde su icono, al iniciar la aplicación se accede al menú quien presenta las siguientes opciones:
 
-* MóduloEducativo.
-* MóduloTratamientos.
-* Módulo Evaluaciones.
-* MóduloReconocimiento.
-* MóduloCompartirImagen.
+>* MóduloEducativo.
+>* MóduloTratamientos.
+>* Módulo Evaluaciones.
+>* MóduloReconocimiento.
+>* MóduloCompartirImagen.
 
 #### A. Módulo Educativo:
 Desde aquí puede acceder a la activity que contiene los accesos mediante opciones a la documentación relacionada a heridas Skin Tears o información que sea interesante de aprender por parte de los usuarios.
@@ -43,18 +62,18 @@ La instalación de la aplicación en su dispositivo, la puede realizar mediante 
 #### A.	Instalación mediante archivo .apk.:
 Descargar archivo desde el siguiente link:
 
-* https://drive.google.com/open?id=1Uqan6MGM82INTJlcp1xgdqh7f9DJjxFk
-* Luego instálelo en su dispositivo.
-* En caso de que no deje instalar la aplicación por no hacerlo desde PlayStore, se debe activar la instalación de aplicaciones de orígenes desconocidas.
+>* https://drive.google.com/open?id=1Uqan6MGM82INTJlcp1xgdqh7f9DJjxFk
+>* Luego instálelo en su dispositivo.
+>* En caso de que no deje instalar la aplicación por no hacerlo desde PlayStore, se debe activar la instalación de aplicaciones de orígenes desconocidas.
 
 #### B.	Instalación mediante GitHub:
 Descargar el proyecto desde el siguiente Link:
 
-* git clone https://github.com/claudiocu81/SkinTearsFinal2019.git
-* Luego debe instalar Android Studio
-* Importar el proyecto en Android Studio
-* Instalarlo en el emulador o en su dispositivo, seleccionando la opción deseada desde el menú, o el botón al lado izquierdo de Run.
-* Puede que le solicite instalar dependencias adicionales, verifique el archivo Gradle(App) y sincronize luego de realizar cambios.
+>* git clone https://github.com/claudiocu81/SkinTearsFinal2019.git
+>* Luego debe instalar Android Studio
+>* Importar el proyecto en Android Studio
+>* Instalarlo en el emulador o en su dispositivo, seleccionando la opción deseada desde el menú, o el botón al lado izquierdo de Run.
+>* Puede que le solicite instalar dependencias adicionales, verifique el archivo Gradle(App) y sincronize luego de realizar cambios.
 
 
 
