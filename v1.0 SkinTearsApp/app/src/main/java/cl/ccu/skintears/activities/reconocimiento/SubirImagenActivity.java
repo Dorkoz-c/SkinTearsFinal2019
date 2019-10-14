@@ -8,6 +8,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
@@ -25,6 +26,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import cl.ccu.skintears.R;
+import cl.ccu.skintears.activities.CompartirImagenActivity;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -48,6 +50,7 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
 
     private String KEY_IMAGEN = "foto";
     private String KEY_NOMBRE = "nombre";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -182,7 +185,7 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
 
 
             if (!compruebaConexion(this)) {
-                Toast.makeText(getBaseContext(),"CONECTESE A INTERNET", Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(),"CONÉCTESE A INTERNET", Toast.LENGTH_LONG).show();
             }
 
 
@@ -193,13 +196,30 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
                 avisoSubaImagen.show();
             }else{
                 uploadImage();
+
+                //imageView.setImageDrawable(null);
+                //imageView.setImageBitmap(null);
+                //imageView.destroyDrawingCache();
+                //imageView.setImageResource(0);
+                //imageView.setImageResource(-1);
+                //imageView.setBackground(null);
+                //ImageView imageView = findViewById(R.id.imageView);
+                //imageView.setImageResource(0);
+/*
+                    //Declaramos un Handler que hace de unión entre el hilo principal y el secundario
+                    Handler handler = new Handler();
+                    //Llamamos al método postDelayed
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            imageView.setImageResource(0);
+                            bitmap = null;
+                        }
+                    }, 10000); // 10 segundos de "delay"
+
+*/
             }
             //uploadImage();
-
-
-
-
-
+            //bitmap = null;
 
 
         }

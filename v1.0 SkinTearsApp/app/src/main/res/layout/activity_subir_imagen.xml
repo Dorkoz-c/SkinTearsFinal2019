@@ -41,7 +41,7 @@
         android:layout_below="@+id/imageView"
         android:maxLength="13"
         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 "
-        android:hint="Que tipo de herida cree que es !!!" />
+        android:hint="¿Qué tipo de herida cree que es?" />
 
     <Button
         android:id="@+id/btnSubir"

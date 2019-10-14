@@ -60,7 +60,7 @@ public class TestCompartirImagenElegir {
         navigationMenuItemView.perform(click());
 
         ViewInteraction appCompatButton = onView(
-                allOf(withId(R.id.btn_subir_foto_rec), withText("Seleccionar Imagen!"),
+                allOf(withId(R.id.btn_subir_foto_rec), withText("Seleccionar Imagen"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(R.id.main_content),

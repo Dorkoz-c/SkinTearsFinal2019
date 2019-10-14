@@ -8,7 +8,7 @@
 
 
     <string name="bienvenida">\Módulo de Evaluaciones, \n\nCompruebe cuanto sabe de Skin Tears...</string>
-    <string name="resultado">\¿Intentelo nuevamente? \n\nEn su última evaluación su puntuación fue: </string>
+    <string name="resultado">\En su última evaluación su puntuación fue: </string>
     <string name="pregunta">PREGUNTA</string>
 
 
@@ -28,10 +28,12 @@
 
     <string name="welcomeText">
         <br>En esta aplicación podrá:\n\n</br>
-        <br>- Aprender sobre las heridas Skin Tears.\n</br>
+        <br>- Aprender sobre heridas Skin Tears.\n</br>
         <br>- Conocer los tratamientos recomendados.\n</br>
         <br>- Evaluar lo aprendido.\n</br>
-        <br>- Reconocer heridas.</br>
+        <br>- Reconocer heridas.\n</br>
+        <br>- Compartir imágenes.</br>
+
     </string>
 
     <string name="reconocimientoInstrucciones">
@@ -39,12 +41,12 @@
         <br>Instrucciones para una buena clasificación\n\n</br>
         <br>- Capture la imagen desde cerca.\n</br>
         <br>- Enfoque bien la herida.\n</br>
-        <br>- Es importante una buena iluminacion.\n</br>
+        <br>- Es importante una buena iluminación.\n</br>
     </string>
 
 
     <string name="compartirImagen">
-        <br><b><big>ADVERTENCIA !!!\n\n</big></b></br>
+        <br><b><big>¡ADVERTENCIA!\n\n</big></b></br>
         <br>Sólo suba imágenes de heridas\n\n</br>
         <br>La imagen que comparta va a subir a Internet\n\n</br>
         <br>La imagen va a ser de conocimiento público\n\n\n</br>
@@ -52,12 +54,12 @@
     </string>
 
 
-    <string name="sls">¡ Bienvenido !</string>
+    <string name="sls">¡Bienvenido!</string>
 
 
     <string name="copyright">Copyright © Claudio Cabrera</string>
 
-    <string name="Version">Version 1.0 © Skin Tears App</string>
+    <string name="Version">Versión 1.0 © Skin Tears App</string>
     <string name="menu_inicial">Menú Inicial</string>
     <string name="jugar">Iniciar Evaluación</string>
     <string name="resultados">Último Resultado</string>

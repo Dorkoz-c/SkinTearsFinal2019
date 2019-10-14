@@ -14,7 +14,7 @@
         android:layout_marginTop="65dp"
         android:background="@drawable/estilo_borde_redondo"
         android:onClick="sacarFoto"
-        android:text="Activar Cámara!"
+        android:text="Activar Cámara"
         android:textAllCaps="false"
         android:textSize="20sp" />
 
@@ -50,7 +50,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@drawable/estilo_borde_redondo"
-        android:text="Seleccionar Imagen!"
+        android:text="Seleccionar Imagen"
         android:textAllCaps="false"
         android:textSize="20sp" />
 
