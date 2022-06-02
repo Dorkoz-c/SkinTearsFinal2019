@@ -25,6 +25,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import cl.ccu.skintears.R;
 import cl.ccu.skintears.activities.CompartirImagenActivity;
 
@@ -34,6 +36,9 @@ import java.util.Hashtable;
 import java.util.Map;
 
 public class SubirImagenActivity extends AppCompatActivity implements View.OnClickListener {
+
+    //Agregamos db para llamar a firebase
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     private Button btnBuscar;
     private Button btnSubir;
@@ -46,10 +51,10 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
 
     private int PICK_IMAGE_REQUEST = 1;
 
-    private String UPLOAD_URL = "https://skintears.000webhostapp.com/upload.php";
+    private String UPLOAD_URL = "https://console.firebase.google.com/u/0/project/skintears2/firestore/data/~2Fopiniones?hl=es";
 
     private String KEY_IMAGEN = "foto";
-    private String KEY_NOMBRE = "nombre";
+    private String KEY_OPINION = "opinion";
 
 
     @Override
@@ -128,17 +133,17 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
                 String imagen = getStringImagen(bitmap);
 
                 //Obtener el nombre de la imagen
-                String nombre = editTextName.getText().toString().trim();
+                String opinionUsuario = editTextName.getText().toString().trim();
 
                 //Creación de parámetros
-                Map<String, String> params = new Hashtable<String, String>();
+                Map<String, String> opinion = new Hashtable<String, String>();
 
                 //Agregando de parámetros
-                params.put(KEY_IMAGEN, imagen);
-                params.put(KEY_NOMBRE, nombre);
+                opinion.put(KEY_IMAGEN, imagen);
+                opinion.put(KEY_OPINION, opinionUsuario);
 
                 //Parámetros de retorno
-                return params;
+                return opinion;
             }
         };
 

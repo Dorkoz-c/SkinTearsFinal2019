@@ -1,9 +1,10 @@
 <component name="libraryTable">
   <library name="Gradle: com.pdftron:pdftron:6.10.4@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fb89b529556daf7db14c21855255032b/pdftron-6.10.4/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fb89b529556daf7db14c21855255032b/pdftron-6.10.4/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fb89b529556daf7db14c21855255032b/pdftron-6.10.4/jars/libs/PDFNet.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6b9959844a2014477394c9575de4f011/transformed/pdftron-6.10.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6b9959844a2014477394c9575de4f011/transformed/pdftron-6.10.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/6b9959844a2014477394c9575de4f011/transformed/pdftron-6.10.4/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/6b9959844a2014477394c9575de4f011/transformed/pdftron-6.10.4/jars/libs/PDFNet.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
