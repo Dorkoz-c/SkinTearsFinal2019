@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -40,8 +40,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageView"
             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 "
-            android:hint="Ingresa tu opinion"
-            android:maxLength="13" />
+            android:hint="Escriba su opinion"
+            android:maxLength="50" />
 
         <Button
             android:id="@+id/btnSubir"
@@ -50,7 +50,7 @@
             android:layout_below="@id/editText"
             android:layout_centerHorizontal="true"
             android:background="@drawable/estilo_borde_redondo"
-            android:text="Subir Opinión" />
+            android:text="Subir opinion" />
 
 
     </RelativeLayout>
