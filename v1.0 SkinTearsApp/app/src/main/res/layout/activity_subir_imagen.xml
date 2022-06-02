@@ -5,14 +5,9 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:orientation="vertical"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingBottom="@dimen/activity_vertical_margin">
+        android:layout_height="wrap_content">
 
 
         <Button
@@ -23,7 +18,6 @@
             android:layout_centerHorizontal="true"
             android:background="@drawable/estilo_borde_redondo"
             android:text="Elegir imagen" />
-
 
         <ImageView
             android:id="@+id/imageView"
@@ -38,10 +32,25 @@
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView"
+            android:layout_below="@id/usuarioTextView"
+            android:layout_marginTop="18dp"
             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 "
             android:hint="Escriba su opinion"
-            android:maxLength="50" />
+            android:maxLength="50"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/usuarioTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnBuscar"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 "
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="Ingrese su nombre de usuario"
+            android:maxLength="50"
+            android:minHeight="48dp"
+            android:textSize="18dp" />
 
         <Button
             android:id="@+id/btnSubir"

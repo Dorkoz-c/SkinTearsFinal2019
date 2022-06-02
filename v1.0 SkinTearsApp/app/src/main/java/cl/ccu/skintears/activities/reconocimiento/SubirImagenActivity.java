@@ -8,7 +8,6 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
@@ -16,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -30,7 +30,6 @@ import com.android.volley.toolbox.Volley;
 import org.apache.commons.lang3.RandomStringUtils;
 
 import cl.ccu.skintears.R;
-import cl.ccu.skintears.activities.CompartirImagenActivity;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -46,6 +45,8 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
 
     private EditText editTextName;
 
+    private TextView usuarioText;
+
     private Bitmap bitmap;
 
     private int PICK_IMAGE_REQUEST = 1;
@@ -55,6 +56,7 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
     private String KEY_IMAGEN = "foto";
     private String KEY_NOMBRE = "opinion";
     private String KEY_RANIMG = "randomstring";
+    private String KEY_USUARIO = "usuario";
 
 
     @Override
@@ -66,6 +68,7 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
         btnSubir = (Button) findViewById(R.id.btnSubir);
 
         editTextName = (EditText) findViewById(R.id.editText);
+        usuarioText = (TextView) findViewById(R.id.usuarioTextView);
 
         imageView = (ImageView) findViewById(R.id.imageView);
 
@@ -104,7 +107,7 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
 
     private void uploadImage() {
         //Mostrar el diálogo de progreso
-        final ProgressDialog loading = ProgressDialog.show(this, "Subiendo Imagen", "Espere por favor . . .", false, false);
+        final ProgressDialog loading = ProgressDialog.show(this, "Subiendo Imagen Y Opinion", "Espere por favor . . .", false, false);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, UPLOAD_URL,
                 new Response.Listener<String>() {
                     @Override
@@ -132,7 +135,10 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
                 //Convertir bits a cadena
                 String imagen = getStringImagen(bitmap);
 
-                //Obtener el nombre de la imagen
+                //se agrega el nombre del usuario que registra la opinion
+                String usuarioNombre = usuarioText.getText().toString();
+
+                //Obtener la opinion de la imagen
                 String opinion = editTextName.getText().toString().trim();
 
                 //Creación de parámetros
@@ -144,6 +150,7 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
                 params.put(KEY_IMAGEN, imagen);
                 params.put(KEY_NOMBRE, opinion);
                 params.put(KEY_RANIMG, random);
+                params.put(KEY_USUARIO, usuarioNombre);
 
                 //Parámetros de retorno
                 return params;
