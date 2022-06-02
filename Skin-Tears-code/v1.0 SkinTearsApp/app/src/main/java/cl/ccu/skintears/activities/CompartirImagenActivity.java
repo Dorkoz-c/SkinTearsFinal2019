@@ -59,7 +59,7 @@ public class CompartirImagenActivity<networkInfo> extends AbstractDrawerActivity
     }
 
 
-    public void sacarFoto(View view) {
+    /*public void sacarFoto(View view) {
         if (view.getId() == R.id.btn_foto_rec &&
                 getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA)) {
 
@@ -79,11 +79,11 @@ public class CompartirImagenActivity<networkInfo> extends AbstractDrawerActivity
             i.putExtra(MediaStore.EXTRA_OUTPUT, mUri);
             startActivityForResult(i, TAKE_PICTURE);
         }
-    }
+    }*/
 
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+    //@Override
+    /*public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
             case TAKE_PICTURE:
@@ -99,7 +99,7 @@ public class CompartirImagenActivity<networkInfo> extends AbstractDrawerActivity
                     }
                 }
         }
-    }
+    }*/
 
 
 

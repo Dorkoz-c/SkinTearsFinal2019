@@ -54,7 +54,7 @@ public class CameraActivity extends AppCompatActivity {
 
     }
 
-    public void sacarFoto(View view) {
+    /*public void sacarFoto(View view) {
         if (view.getId() == R.id.btn_foto_rec &&
                 getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA)) {
 
@@ -93,5 +93,5 @@ public class CameraActivity extends AppCompatActivity {
                     }
                 }
         }
-    }
+    }*/
 }

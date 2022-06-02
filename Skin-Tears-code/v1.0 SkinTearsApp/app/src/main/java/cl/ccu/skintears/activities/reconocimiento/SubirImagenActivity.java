@@ -12,6 +12,7 @@ import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,6 +26,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+
+//strings aleatorios
+import org.apache.commons.lang3.RandomStringUtils;
+
 import cl.ccu.skintears.R;
 import cl.ccu.skintears.activities.CompartirImagenActivity;
 
@@ -46,10 +51,11 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
 
     private int PICK_IMAGE_REQUEST = 1;
 
-    private String UPLOAD_URL = "https://skintears.000webhostapp.com/upload.php";
+    private String UPLOAD_URL = "https://skintearsg2.000webhostapp.com/upload.php";
 
     private String KEY_IMAGEN = "foto";
-    private String KEY_NOMBRE = "nombre";
+    private String KEY_NOMBRE = "opinion";
+    private String KEY_RANIMG = "randomstring";
 
 
     @Override
@@ -108,6 +114,7 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
                         loading.dismiss();
                         //Mostrando el mensaje de la respuesta
                         Toast.makeText(SubirImagenActivity.this, s, Toast.LENGTH_LONG).show();
+                        Log.e("Mensaje", s);
                     }
                 },
                 new Response.ErrorListener() {
@@ -128,15 +135,18 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
                 String imagen = getStringImagen(bitmap);
 
                 //Obtener el nombre de la imagen
-                String nombre = editTextName.getText().toString().trim();
+                String opinion = editTextName.getText().toString().trim();
 
                 //Creación de parámetros
                 Map<String, String> params = new Hashtable<String, String>();
 
+                String random = RandomStringUtils.randomAlphabetic(10);
+
                 //Agregando de parámetros
                 params.put(KEY_IMAGEN, imagen);
-                params.put(KEY_NOMBRE, nombre);
-
+                params.put(KEY_NOMBRE, opinion);
+                params.put(KEY_RANIMG, random);
+                Log.e("imagen", imagen);
                 //Parámetros de retorno
                 return params;
             }
