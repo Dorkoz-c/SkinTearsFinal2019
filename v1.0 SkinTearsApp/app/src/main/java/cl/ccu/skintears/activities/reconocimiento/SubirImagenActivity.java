@@ -30,6 +30,7 @@ import com.android.volley.toolbox.Volley;
 import org.apache.commons.lang3.RandomStringUtils;
 
 import cl.ccu.skintears.R;
+import cl.ccu.skintears.tflitecamera.ImageClassifier;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -58,6 +59,9 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
     private String KEY_RANIMG = "randomstring";
     private String KEY_USUARIO = "usuario";
 
+    private String KEY_MODELO = "Modelo";
+
+    private ImageClassifier classifier;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,6 +138,26 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
             protected Map<String, String> getParams() throws AuthFailureError {
                 //Convertir bits a cadena
                 String imagen = getStringImagen(bitmap);
+// no le estamos pasando el bitmap classifire.classifireframe
+                try {
+                    classifier= new ImageClassifier(SubirImagenActivity.this);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                String textToShow = "SANDIA";
+                 if (classifier == null || SubirImagenActivity.this == null) {
+                    System.out.println("++++++++++++++++++++++++++++++++++++++");
+                    System.out.println(classifier);
+                    System.out.println(SubirImagenActivity.this);
+                    System.out.println("++++++++++++++++++++++++++++++++++++++");
+                    String resultadoModelo = "Uninitialized Classifier or invalid context.";
+                }else{
+                    //Bitmap bit_map = getStringImagen(bitmap); //textureView.getBitmap(ImageClassifier.DIM_IMG_SIZE_X, ImageClassifier.DIM_IMG_SIZE_Y);
+                     Bitmap result = Bitmap.createScaledBitmap(bitmap, 224, 224, false);
+                     //result.recycle();
+                    textToShow = classifier.classifyFrame(result);
+
+                }
 
                 //se agrega el nombre del usuario que registra la opinion
                 String usuarioNombre = usuarioText.getText().toString();
@@ -151,6 +175,7 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
                 params.put(KEY_NOMBRE, opinion);
                 params.put(KEY_RANIMG, random);
                 params.put(KEY_USUARIO, usuarioNombre);
+                params.put(KEY_MODELO, textToShow);
 
                 //Parámetros de retorno
                 return params;

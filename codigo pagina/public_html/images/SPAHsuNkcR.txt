@@ -1,0 +1,6 @@
+No es Tipo 2
+Javiera Contreras
+161ms
+SkinTear Tipo 3: 6.40
+SkinTear Tipo 1: 0.00
+Piel Normal: 0.00Array

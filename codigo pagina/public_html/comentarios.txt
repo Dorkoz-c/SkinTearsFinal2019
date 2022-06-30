@@ -1,0 +1,4 @@
+-----------------
+Tipo de Herida: Piel sana
+Comentario: Claramente es piel sana
+-----------------

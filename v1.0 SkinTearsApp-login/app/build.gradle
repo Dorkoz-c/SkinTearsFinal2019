@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'com.google.gms.google-services'  // Google Services plugin
+
+//tensorflow
+project.ext.ASSET_DIR = projectDir.toString() + '/src/main/assets'
+assert file(project.ext.ASSET_DIR + "/graph.lite").exists()
+assert file(project.ext.ASSET_DIR + "/labels.txt").exists()
+
+android {
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "cl.ccu.skintears"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        manifestPlaceholders = [pdftronLicenseKey: PDFTRON_LICENSE_KEY]
+    }
+    //tensorflow
+    //tensorflow
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //tensorflow
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    androidResources {
+        noCompress 'lite'
+    }
+    lint {
+        abortOnError false
+    }
+
+    configurations.all {
+        resolutionStrategy.force "com.android.support:appcompat-v7:28.0.0"
+        resolutionStrategy.force "com.android.support:support-v4:28.0.0"
+    }
+
+}
+//tensorflow
+repositories {
+    maven {
+        url 'https://maven.google.com/tensorflow'
+    }
+    google()
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v13:28.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation 'com.android.support:support-annotations:28.0.0'
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'com.mcxiaoke.volley:library-aar:1.0.0'
+    implementation 'org.tensorflow:tensorflow-lite:2.3.0'
+    androidTestImplementation 'com.android.support.test:runner'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation "com.pdftron:pdftron:6.10.4"
+    implementation "com.pdftron:tools:6.10.4"
+    androidTestImplementation 'com.android.support.test:rules'
+
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:30.1.0')
+
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+
+    // Declare the dependencies for the desired Firebase products
+    // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore'
+
+}

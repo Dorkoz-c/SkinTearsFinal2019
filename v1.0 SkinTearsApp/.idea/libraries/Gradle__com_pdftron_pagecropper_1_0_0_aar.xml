@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.pdftron:pagecropper:1.0.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/0659245590da95cb289b847375ad3852/transformed/pagecropper-1.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0659245590da95cb289b847375ad3852/transformed/pagecropper-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0659245590da95cb289b847375ad3852/transformed/pagecropper-1.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/1ed88f4029bc39a87dc5a5ea688694ea/transformed/pagecropper-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1ed88f4029bc39a87dc5a5ea688694ea/transformed/pagecropper-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1ed88f4029bc39a87dc5a5ea688694ea/transformed/pagecropper-1.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
