@@ -1,0 +1,6 @@
+Me aparecio herida tipo 1 es tipo 3
+Milaneso Fuentes
+149ms
+SkinTear Tipo 2: 6.34
+SkinTear Tipo 3: 0.05
+SkinTear Tipo 1: 0.01Array

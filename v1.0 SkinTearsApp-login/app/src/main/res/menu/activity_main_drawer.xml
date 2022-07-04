@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    // Indico los nombres de los elementos de la barra lateral
+    <item
+        android:id="@+id/id_inicio"
+        android:icon="@drawable/ic_home"
+        android:title="Inicio" />
+    <item
+        android:id="@+id/id_contenidos"
+        android:icon="@drawable/ic_book"
+        android:title="Contenidos" />
+    <item
+        android:id="@+id/id_tratamientos"
+        android:icon="@drawable/ic_health"
+        android:title="Tratamientos" />
+
+    <item
+        android:id="@+id/id_evaluaciones"
+        android:icon="@drawable/ic_test"
+        android:title="Evaluaciones" />
+
+    <item
+        android:id="@+id/id_reconocimiento"
+        android:icon="@drawable/ic_camera"
+        android:title="Reconocimiento" />
+
+    <item
+        android:id="@+id/id_compartir"
+        android:icon="@drawable/ic_share"
+        android:title="Compartir imagen" />
+
+
+</menu>

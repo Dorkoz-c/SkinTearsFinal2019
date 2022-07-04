@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "178089527880",
+    "project_id": "skintears2",
+    "storage_bucket": "skintears2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178089527880:android:daf77d93e0ab239738e67d",
+        "android_client_info": {
+          "package_name": "cl.ccu.skintears"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "178089527880-j927001lapmhi2d4kl7qa6qdago88nqe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYjxpjGtAJUKeBnUPNrWCbLiitu5Lxg48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "178089527880-j927001lapmhi2d4kl7qa6qdago88nqe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

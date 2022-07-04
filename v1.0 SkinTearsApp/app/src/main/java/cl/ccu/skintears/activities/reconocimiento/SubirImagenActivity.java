@@ -8,7 +8,6 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
@@ -16,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -25,8 +25,12 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+
+//strings aleatorios
+import org.apache.commons.lang3.RandomStringUtils;
+
 import cl.ccu.skintears.R;
-import cl.ccu.skintears.activities.CompartirImagenActivity;
+import cl.ccu.skintears.tflitecamera.ImageClassifier;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -42,15 +46,22 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
 
     private EditText editTextName;
 
+    private TextView usuarioText;
+
     private Bitmap bitmap;
 
     private int PICK_IMAGE_REQUEST = 1;
 
-    private String UPLOAD_URL = "https://skintears.000webhostapp.com/upload.php";
+    private String UPLOAD_URL = "https://skintearsg2.000webhostapp.com/upload.php";
 
     private String KEY_IMAGEN = "foto";
-    private String KEY_NOMBRE = "nombre";
+    private String KEY_NOMBRE = "opinion";
+    private String KEY_RANIMG = "randomstring";
+    private String KEY_USUARIO = "usuario";
 
+    private String KEY_MODELO = "Modelo";
+
+    private ImageClassifier classifier;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +72,7 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
         btnSubir = (Button) findViewById(R.id.btnSubir);
 
         editTextName = (EditText) findViewById(R.id.editText);
+        usuarioText = (TextView) findViewById(R.id.usuarioTextView);
 
         imageView = (ImageView) findViewById(R.id.imageView);
 
@@ -99,7 +111,7 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
 
     private void uploadImage() {
         //Mostrar el diálogo de progreso
-        final ProgressDialog loading = ProgressDialog.show(this, "Subiendo Imagen", "Espere por favor . . .", false, false);
+        final ProgressDialog loading = ProgressDialog.show(this, "Subiendo Imagen Y Opinion", "Espere por favor . . .", false, false);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, UPLOAD_URL,
                 new Response.Listener<String>() {
                     @Override
@@ -126,16 +138,44 @@ public class SubirImagenActivity extends AppCompatActivity implements View.OnCli
             protected Map<String, String> getParams() throws AuthFailureError {
                 //Convertir bits a cadena
                 String imagen = getStringImagen(bitmap);
+// no le estamos pasando el bitmap classifire.classifireframe
+                try {
+                    classifier= new ImageClassifier(SubirImagenActivity.this);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                String textToShow = "SANDIA";
+                 if (classifier == null || SubirImagenActivity.this == null) {
+                    System.out.println("++++++++++++++++++++++++++++++++++++++");
+                    System.out.println(classifier);
+                    System.out.println(SubirImagenActivity.this);
+                    System.out.println("++++++++++++++++++++++++++++++++++++++");
+                    String resultadoModelo = "Uninitialized Classifier or invalid context.";
+                }else{
+                    //Bitmap bit_map = getStringImagen(bitmap); //textureView.getBitmap(ImageClassifier.DIM_IMG_SIZE_X, ImageClassifier.DIM_IMG_SIZE_Y);
+                     Bitmap result = Bitmap.createScaledBitmap(bitmap, 224, 224, false);
+                     //result.recycle();
+                    textToShow = classifier.classifyFrame(result);
 
-                //Obtener el nombre de la imagen
-                String nombre = editTextName.getText().toString().trim();
+                }
+
+                //se agrega el nombre del usuario que registra la opinion
+                String usuarioNombre = usuarioText.getText().toString();
+
+                //Obtener la opinion de la imagen
+                String opinion = editTextName.getText().toString().trim();
 
                 //Creación de parámetros
                 Map<String, String> params = new Hashtable<String, String>();
 
+                String random = RandomStringUtils.randomAlphabetic(10);
+
                 //Agregando de parámetros
                 params.put(KEY_IMAGEN, imagen);
-                params.put(KEY_NOMBRE, nombre);
+                params.put(KEY_NOMBRE, opinion);
+                params.put(KEY_RANIMG, random);
+                params.put(KEY_USUARIO, usuarioNombre);
+                params.put(KEY_MODELO, textToShow);
 
                 //Parámetros de retorno
                 return params;

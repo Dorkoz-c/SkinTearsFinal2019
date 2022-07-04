@@ -1,0 +1,215 @@
+CREATE TABLE `preguntas` (
+    _id INTEGER AUTO INCREMENT PRIMARY KEY,
+    `pregunta` VARCHAR(256),
+    `rtaCorrecta` VARCHAR(32) NOT NULL,
+    `rtaIncorrecta1` VARCHAR(32) NOT NULL,
+    `rtaIncorrecta2` VARCHAR(32) NOT NULL,
+    `rtaIncorrecta3` VARCHAR(32) NOT NULL,
+    `dificultad` CHARACTER NOT NULL DEFAULT 'F',
+    `categoria` CHARACTER NOT NULL DEFAULT 'I',
+    `imagen` VARCHAR(32) DEFAULT "NULL",
+    `sonido` VARCHAR(32) DEFAULT "NULL",
+    `tipo` INTEGER NOT NULL
+ );
+
+-- tipo
+-- 1: pregunta texto, respuesta texto
+-- 2: pregunta imagen, respuesta texto
+-- 3: pregunta texto, respuesta imagen
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `tipo`)
+VALUES("¿Cuantas categorías se clasifican las heridas Skin Tears?", "3", "2", "1", "4", 1);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `tipo`)
+VALUES("¿Cual es la categoría de Herida Skin Tears de menor complejidad", "1", "2", "3", "4", 1);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `tipo`)
+VALUES("¿Que grupo de personas están mas propensas a sufrir de este tipo de heridas ?", "Tercera edad", "Jóvenes", "Adultos", "Niños", 1);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `tipo`)
+VALUES("¿Qué significa la sigla ISTAP?", "International Skin Tear Advisory Panel", "International Skin Tear Advisory Protocol", "International Skin Tear Advisory Partner", "International Skin Tear Association Panel", 1);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `tipo`)
+VALUES("¿Que zona es donde donde se producen con menor frecuencia las heridas Skin Tears?", "Rostro", "Extremidades Inferiores", "Extremidades Superiores", "Manos", 1);
+
+
+--
+
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears01_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 3", "Tipo 2", "Tipo 1", "Piel Normal", "skintears02_t3", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 3", "Tipo 2", "Tipo 1", "Piel Normal", "skintears03_t3", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 1", "Tipo 2", "Tipo 3", "Piel Normal", "skintears05_t1", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears06_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 1", "Tipo 2", "Tipo 3", "Piel Normal", "skintears07_t1", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 3", "Tipo 2", "Tipo 1", "Piel Normal", "skintears09_t3", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears10_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears11_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 3", "Tipo 2", "Tipo 1", "Piel Normal", "skintears14_t3", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 1", "Tipo 2", "Tipo 3", "Piel Normal", "skintears15_t1", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 3", "Tipo 2", "Tipo 1", "Piel Normal", "skintears16_t3", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears17_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears18_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears19_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 1", "Tipo 2", "Tipo 3", "Piel Normal", "skintears20_t1", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears21_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears22_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 1", "Tipo 2", "Tipo 3", "Piel Normal", "skintears23_t1", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears25_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 1", "Tipo 2", "Tipo 3", "Piel Normal", "skintears26_t1", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears27_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears28_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 3", "Tipo 2", "Tipo 1", "Piel Normal", "skintears29_t3", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 1", "Tipo 2", "Tipo 3", "Piel Normal", "skintears30_t1", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 3", "Tipo 2", "Tipo 1", "Piel Normal", "skintears31_t3", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 1", "Tipo 2", "Tipo 3", "Piel Normal", "skintears32_t1", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears33_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 3", "Tipo 2", "Tipo 1", "Piel Normal", "skintears34_t3", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears35_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 3", "Tipo 2", "Tipo 1", "Piel Normal", "skintears36_t3", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears37_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears38_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 3", "Tipo 2", "Tipo 1", "Piel Normal", "skintears40_t3", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 3", "Tipo 2", "Tipo 1", "Piel Normal", "skintears41_t3", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 1", "Tipo 2", "Tipo 3", "Piel Normal", "skintears42_t1", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears43_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 3", "Tipo 2", "Tipo 1", "Piel Normal", "skintears45_t3", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 3", "Tipo 2", "Tipo 1", "Piel Normal", "skintears47_t3", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 1", "Tipo 2", "Tipo 3", "Piel Normal", "skintears48_t1", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 3", "Tipo 2", "Tipo 1", "Piel Normal", "skintears57_t3", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 3", "Tipo 2", "Tipo 1", "Piel Normal", "skintears58_t3", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears60_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 1", "Tipo 2", "Tipo 3", "Piel Normal", "skintears63_t1", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears64_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 3", "Tipo 2", "Tipo 1", "Piel Normal", "skintears65_t3", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 3", "Tipo 2", "Tipo 1", "Piel Normal", "skintears66_t3", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears67_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 2", "Tipo 1", "Tipo 3", "Piel Normal", "skintears68_t2", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 1", "Tipo 2", "Tipo 3", "Piel Normal", "skintears69_t1", 2);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `imagen`, `tipo`)
+VALUES("¿Qué tipo de herida es?", "Tipo 1", "Tipo 2", "Tipo 3", "Piel Normal", "skintears70_t1", 2);
+
+
+--
+
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `tipo`)
+VALUES("¿Indique la Herida de Tipo 1?", "skintears20s_t1", "skintears18s_t2", "skintears10s_t2", "skintears02s_t3", 3);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `tipo`)
+VALUES("¿Indique la Herida de Tipo 2?", "skintears22s_t2", "skintears02s_t3", "skintears20s_t1", "skintears32s_t1", 3);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `tipo`)
+VALUES("¿Indique la Herida de Tipo 3?", "skintears40s_t3", "skintears32s_t1", "skintears22s_t2", "skintears18s_t2", 3);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `tipo`)
+VALUES("¿Indique la Herida de Tipo 1?", "skintears42s_t1", "skintears40s_t3", "skintears28s_t2", "skintears10s_t2", 3);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `tipo`)
+VALUES("¿Indique la Herida de Tipo 2?", "skintears33s_t2", "skintears40s_t3", "skintears20s_t1", "skintears32s_t1", 3);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `tipo`)
+VALUES("¿Indique la Herida de Tipo 3?", "skintears58s_t3", "skintears35s_t2", "skintears22s_t2", "skintears32s_t1", 3);
+
+INSERT INTO `preguntas` (`pregunta`, `rtaCorrecta`, `rtaIncorrecta1`, `rtaIncorrecta2`, `rtaIncorrecta3`, `tipo`)
+VALUES("¿Indique la Herida de Tipo 1?", "skintears70s_t1", "skintears40s_t3", "skintears18s_t2", "skintears10s_t2", 3);

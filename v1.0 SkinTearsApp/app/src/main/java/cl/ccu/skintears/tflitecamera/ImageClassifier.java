@@ -95,7 +95,7 @@ public class ImageClassifier {
           });
 
   /** Initializes an {@code ImageClassifier}. */
-  ImageClassifier(Activity activity) throws IOException {
+  public ImageClassifier(Activity activity) throws IOException {
     tflite = new Interpreter(loadModelFile(activity));
     labelList = loadLabelList(activity);
     imgData =
@@ -108,11 +108,14 @@ public class ImageClassifier {
   }
 
   /** Classifies a frame from the preview stream. */
-  String classifyFrame(Bitmap bitmap) {
+  public String classifyFrame(Bitmap bitmap) {
     if (tflite == null) {
       Log.e(TAG, "Image classifier has not been initialized; Skipped.");
       return "Uninitialized Classifier.";
     }
+    System.out.println(bitmap.getHeight());
+    System.out.println(bitmap.getWidth());
+    System.out.println(bitmap.getByteCount());
     convertBitmapToByteBuffer(bitmap);
     // Here's where the magic happens!!!
     long startTime = SystemClock.uptimeMillis();
@@ -188,6 +191,7 @@ public class ImageClassifier {
       return;
     }
     imgData.rewind();
+    System.out.println(bitmap);
     bitmap.getPixels(intValues, 0, bitmap.getWidth(), 0, 0, bitmap.getWidth(), bitmap.getHeight());
     // Convert the image to floating point.
     int pixel = 0;

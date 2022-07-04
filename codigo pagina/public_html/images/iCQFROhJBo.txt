@@ -1,0 +1,6 @@
+Es tipo 2
+Vicente Rodriguez
+143ms
+SkinTear Tipo 3: 5.61
+SkinTear Tipo 2: 0.79
+SkinTear Tipo 1: 0.00Array

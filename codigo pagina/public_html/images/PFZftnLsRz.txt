@@ -1,0 +1,6 @@
+No es herida tipo 1
+Roberto
+146ms
+Piel Normal: 6.39
+SkinTear Tipo 1: 0.01
+SkinTear Tipo 3: 0.00Array
