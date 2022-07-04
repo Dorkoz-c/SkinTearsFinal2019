@@ -1,3 +1,28 @@
+# Skin Tears App 1.5
+
+**Proyecto mejorado y actualizado en 2022 por equipo de estudiantes del MCC de la Universidad Andrés Bello.
+
+## Integraciones de la nueva versión de la Aplicación.
+>* Se actualizaron las librerias y versiones del proyecto en AndroidStudio para su uso correspondiente.
+>* Se modificó la sección de Compartir Imagen para poder subir una imagen junto con un comentario del usuario a una página web.
+>* Se creó una página web en base a PHP que permite mostrar las imágenes y comentarios realizados por usuarios para luego ser respondidas estos últimos por parte de un experto con acceso a la pagina en cuestión.
+>* Se integró el classifier de heridas en la sección de Compartir Imagen para realizar un análisis de las imágenes subidas por el usuario y así enviar la "opinion" del modelo sobre la herida.
+>* Se deja a dispisición para uso futuro una carpeta que contiene los archivos necesarios para correr la página PHP.
+>* Se actualizó el archivo apk.
+>* Se crearon distintos diagramas que explican el modelo actual de la página, se encuentra en la carpeta Diagramas
+>* Se mantiene una versión de la aplicación denominada "v1.5 SkinTearsApp-login", versión en la que se intentó integrar un login mediante SQLite y FIrebase Auth pero sin resultados positivos.
+
+**Pasos para levantar la página web. 
+>* Ir al sitio o VM escogido para el levantamiento de la aplicación.
+>* Subir los archivos encontrados en la carpeta "codigo pagina/public_html"
+>* Rescatar la nueva dirección de la página en cuestrión y pegar esta la clase "SubirImagenActivity" en las primeras líneas de código, reemplazando la página ahí puesta.
+>* Listo para usar.
+
+**Integrantes de la nueva versión de la App.
+>* Javier Cordero
+>* Vincent Depassier
+>* Rodolfo Valentín
+
 # Skin Tears App
 
 Proyecto de Titulo para la Carrera de Ingeniería en Computación e Informatica Universidad Andrés Bello.
@@ -90,7 +115,9 @@ Descargar el proyecto desde el siguiente Link:
 >* Puede que le solicite instalar dependencias adicionales, verifique el archivo Gradle(App) y sincronize luego de realizar cambios.
 
 
-## Autores del Proyecto.
+## Autores del Proyecto Original.
 
 >* Autor: **Claudio Cabrera**
 >* Profesor Guía: **Diego Mellado**
+
+

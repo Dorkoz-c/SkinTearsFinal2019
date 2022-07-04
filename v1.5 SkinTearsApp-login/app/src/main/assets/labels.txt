@@ -1,0 +1,4 @@
+Piel Normal
+SkinTear Tipo 1
+SkinTear Tipo 2
+SkinTear Tipo 3
